@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Page principale</title>
+  <link rel="icon" href="../icons/logo.png"/>
+  <link rel="stylesheet" href="home.css"/>
+  <link rel="stylesheet" href="base.css"/>
+
+  <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script type="text/javascript" src="home_script.js"></script>
+</head>
+
+<body onload="loadWebpageData()">
+  <header><h1>Dashboard</h1></header>
+  <button id='b1'><img src="../icons/Menu.png" width="50" height="50" class="menu" onclick="displayNav()"></button>
+  <div id="header-background"></div>
+  <nav>
+    <ul class="menu-home"><a href="home.html"><img src="../icons/home.png" width="50" height="50"></a></ul>
+    <ul class="menu-détails"><a href="détails.html"><img src="../icons/compteur.png" width="50" height="50"></a></ul>
+    <ul class="menu-santé"><a href="santé.html"><img src="../icons/health.png" width="50" height="50"></a></ul>
+    <ul class="menu-export"><a href="export.html"><img src="../icons/table.png" width="50" height="50"></a></ul>
+  </nav>
+    <div class="bloc">
+      <span id="date_heure"></span>
+
+      <canvas id="thermometer" width="300" height="200"></canvas>
+      <img src="../icons/warning.png" width="150" height="150" class="warning1" onclick="redirect()">
+
+      <canvas id="hygrometer" width="300" height="200"></canvas>
+      <img src="../icons/warning.png" width="150" height="150" class="warning2" onclick="redirect()">
+
+      <canvas id="bonhomme" width="250" height="550"  onclick="genre()"> </canvas>
+
+      <div id="temperatureChart"></div>
+      <div id="humidityChart"></div>
+      <table>
+        <tr>
+          <th>Températures (valeurs sur 1h)</th>
+          <th>°C</th>
+          <th>°F</th>
+          <th>°K</th>
+        </tr>
+        <tr>
+          <td>Moyenne</td>
+          <td class="tempTableLine"></td>
+          <td class="tempTableLine"></td>
+          <td class="tempTableLine"></td>
+        </tr>
+        <tr>
+          <td>Minimum</td>
+          <td class="tempTableLine"></td>
+          <td class="tempTableLine"></td>
+          <td class="tempTableLine"></td>
+        </tr>
+        <tr>
+          <td>Maximum</td>
+          <td class="tempTableLine"></td>
+          <td class="tempTableLine"></td>
+          <td class="tempTableLine"></td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Page détails</title>
+  <link rel="icon" href="../icons/logo.png"/>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="details.css"/>
+  <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="details_script.js"></script>
+</head>
+
+<body onload="loadWebpageData()">
+  <header><h1>Dashboard</h1></header>
+  <div id="header-background"></div>
+  <button id='b1' onclick="displayNav()"><img src="../icons/Menu.png" width="50" height="50" class="menu"></button>
+  <nav>
+    <ul class="menu-home"><a href="home.html"><img src="../icons/home.png" width="50" height="50"></a></ul>
+    <ul class="menu-détails"><a href="détails.html"><img src="../icons/compteur.png" width="50" height="50"></a></ul>
+    <ul class="menu-santé"><a href="santé.html"><img src="../icons/health.png" width="50" height="50"></a></ul>
+    <ul class="menu-export"><a href="export.html"><img src="../icons/table.png" width="50" height="50"></a></ul>
+  </nav>
+
+  <div class="bloc" id="Moyenne">
+    <h3>Moyennes</h3>
+    <p class="d">Aucune donnée reçue</p>
+    <canvas id="thermometer" width="250" height="150">A</canvas>
+    <div class = "donnée1">
+      <h4>Données sur 1h :</h4>
+      <p>
+        Pas de données <br />
+      </p>
+    </div>
+    <canvas id="hygrometer" width="250" height="150">B</canvas>
+    <div class = "donnée2">
+      <h4>Données sur 1h :</h4>
+      <p>
+        Pas de données <br />
+      </p>
+    </div>
+  </div>
+
+  <div class="bloc" id="Erreurs">
+    <h3>Erreurs</h3>
+    <img src="../icons/warning.png" alt="ATTENTION" height="60" width="60">
+    <p>Le/Les capteur(s) n°X, X n'envoie(nt) pas de données.</p><br>
+    <img src="../icons/critical.png" alt="ATTENTION" height="60" width="60">
+    <p>Le/Les capteur(s) n°X, X envoie(nt) des données incohérentes.</p>
+  </div>
+
+  <div class="bloc Capteur">
+    <h3 onclick="expandCollapse(this)"> V Capteur n°1</h3>
+    <p>Température: XX°C <br>Moyenne : XX°C <br> Minimum : XX°C <br> Maximum : XX°C <br>
+    </p>
+    <p>Humidité :XX% <br>Moyenne : XX% <br> Minimum : XX% <br> Maximum : XX% <br>
+    </p>
+    <img src="../icons/warning.png" class="warning">
+    <p>Aucune donnée reçue</p>
+  </div>
+
+  <div class="bloc Capteur">
+    <h3 onclick="expandCollapse(this)"> V Capteur n°2</h3>
+    <p>Température: XX°C <br>Moyenne : XX°C <br> Minimum : XX°C <br> Maximum : XX°C <br>
+    </p>
+    <p>Humidité :XX% <br>Moyenne : XX% <br> Minimum : XX% <br> Maximum : XX% <br>
+    </p>
+    <img src="../icons/warning.png" class="warning">
+    <p>Aucune donnée reçue</p>
+  </div>
+  </div>
+  <div class="bloc Capteur">
+    <h3 onclick="expandCollapse(this)"> V Capteur n°3</h3>
+    <p>Température: XX°C <br>Moyenne : XX°C <br> Minimum : XX°C <br> Maximum : XX°C <br>
+    </p>
+    <p>Humidité :XX% <br>Moyenne : XX% <br> Minimum : XX% <br> Maximum : XX% <br>
+    </p>
+    <img src="../icons/warning.png" class="warning">
+    <p>Aucune donnée reçue</p>
+  </div>
+  </div>
+  <div class="bloc Capteur">
+    <h3 onclick="expandCollapse(this)"> V Capteur n°4</h3>
+    <p>Température: XX°C <br>Moyenne : XX°C <br> Minimum : XX°C <br> Maximum : XX°C <br>
+    </p>
+    <p>Humidité :XX% <br>Moyenne : XX% <br> Minimum : XX% <br> Maximum : XX% <br>
+    </p>
+    <img src="../icons/warning.png" class="warning">
+    <p>Aucune donnée reçue</p>
+  </div>
+  </div>
+  <div class="bloc Capteur">
+    <h3 onclick="expandCollapse(this)"> V Capteur n°5</h3>
+    <p>Température: XX°C <br>Moyenne : XX°C <br> Minimum : XX°C <br> Maximum : XX°C <br>
+    </p>
+    <p>Humidité :XX% <br>Moyenne : XX% <br> Minimum : XX% <br> Maximum : XX% <br>
+    </p>
+    <img src="../icons/warning.png" class="warning">
+    <p>Aucune donnée reçue</p>
+  </div>
+  </div>
+  <div class="bloc Capteur">
+    <h3 onclick="expandCollapse(this)"> V Capteur n°6</h3>
+    <p>Température: XX°C <br>Moyenne : XX°C <br> Minimum : XX°C <br> Maximum : XX°C <br>
+    </p>
+    <p>Humidité :XX% <br>Moyenne : XX% <br> Minimum : XX% <br> Maximum : XX% <br>
+    </p>
+    <img src="../icons/warning.png" class="warning">
+    <p>Aucune donnée reçue</p>
+  </div>
+  </div>
+  <div class="bloc Capteur">
+    <h3 onclick="expandCollapse(this)"> V Capteur n°7</h3>
+    <p>Température: XX°C <br>Moyenne : XX°C <br> Minimum : XX°C <br> Maximum : XX°C <br>
+    </p>
+    <p>Humidité :XX% <br>Moyenne : XX% <br> Minimum : XX% <br> Maximum : XX% <br>
+    </p>
+    <img src="../icons/warning.png" class="warning">
+    <p>Aucune donnée reçue</p>
+  </div>
+  </div>
+</body>
+
+</html>

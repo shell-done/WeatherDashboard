@@ -1,0 +1,55 @@
+.bloc{
+  position: relative; z-index: 1;
+  background-color: #333333;
+  border-radius:7mm;
+  padding-bottom:12%;
+  margin-left: 85px;
+  margin-top: 60px;
+  margin-right: 30px;
+  top: 50px;
+}
+
+#capteur{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+	border: 2px solid grey;
+}
+
+h3{
+  color:#44B6A7;
+  font-size: 200%;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+#santé{
+  padding-left: 20px;
+  padding-top: 10px;
+	border: 2px solid grey;
+}
+
+h2 {
+  color: red;
+}
+
+.therm > li, .hygro > li, .therm span, .hygro span {
+  color: red;
+  font-size: 1.3em;
+}
+
+ul > p{
+  font-size: 1.5em;
+}
+
+li {
+  margin-left: 20px;
+  color: white;
+  font-size: 1.2em;
+}
+
+li > span {
+  color: white;
+}

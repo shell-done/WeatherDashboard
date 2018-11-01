@@ -1,0 +1,65 @@
+body {
+	font-family: "Calibri";
+	background-color: black;
+	color:white;
+	position: relative;
+	z-index: 0;
+}
+
+#b1{
+	position: fixed;
+	z-index: 2;
+	background: rgba(9,116,121,0);
+	border: hidden;
+	top: 10px;
+	left: 2px;
+	outline: none;
+}
+
+h1{
+    position: fixed; z-index: 4;
+	right:1vw;
+	top: -1.5vw;
+    font-size: 2.5em;
+}
+
+#bloc{
+    background-color: black;
+}
+
+nav {
+	position: fixed;
+	z-index: 1;
+	background-color: #333333;
+	top: 10%;
+	height: 100%;
+
+	margin-left: -42px;
+	padding-right: 6px;
+}
+
+header {
+    position: fixed; z-index: 2;
+    background: rgba(9,116,121,0.8);
+    height: 10%;
+    width: 110%;
+	top: 0;
+	left: 0;
+}
+
+header h1 {
+	display: inline-block;
+	line-height: 210%;
+	vertical-align:middle;
+	padding: 0;
+}
+
+#header-background{
+	position: relative;
+	z-index: 1;
+	background: rgba(9,116,121,1) ;
+    height: 7%;
+    width: 110%;
+	top: 0;
+	left: 0;
+}

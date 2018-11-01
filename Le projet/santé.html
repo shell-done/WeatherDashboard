@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Conseils santé</title>
+  <link rel="icon" href="../icons/logo.png"/>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="santé.css" />
+  <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="sante_script.js"></script>
+</head>
+
+<body onload="loadWebpageData()">
+  <header><h1>Dashboard</h1></header>
+  <div id="header-background"></div>
+  <button id='b1' onclick="displayNav()"><img src="../icons/Menu.png" width="50" height="50" class="menu"></button>
+  <nav>
+    <ul class="menu-home"><a href="home.html"><img src="../icons/home.png" width="50" height="50"></a></ul>
+    <ul class="menu-détails"><a href="détails.html"><img src="../icons/compteur.png" width="50" height="50"></a></ul>
+    <ul class="menu-santé"><a href="santé.html"><img src="../icons/health.png" width="50" height="50"></a></ul>
+    <ul class="menu-export"><a href="export.html"><img src="../icons/table.png" width="50" height="50"></a></ul>
+  </nav>
+  <div class="bloc" id="capteur">
+    <h3>Informations</h3>
+    <canvas id="thermometer" width="300" height="200"></canvas>
+    <img src="../icons/warning.png" width="150" height="150" class="warning1">
+    <canvas id="hygrometer" width="300" height="200"></canvas>
+    <img src="../icons/warning.png" width="150" height="150" class="warning2">
+  </div>
+
+  <div class="bloc" id="santé">
+    <h3>Conseils santé</h3>
+    <h2 id="alert"><span>Attention aux personnes sensibles (enfants, personnes agées, asthmatiques)</span></h2>
+    <ul class="therm">
+      <li><span>La température idéale d'une pièce de vie est comprise entre 19 °C et 21 °C.</span></li>
+    </ul>
+    <ul class="hygro">
+      <li><span>L'humidité idéale d'une pièce est comprise entre 45% et 65%.</span></li>
+    </ul>
+    <ul class="thermhigh">
+      <p>Lorsque la température est trop élevée:</p>
+      <li><span>Pensez à fermer les volets pour rester à l’ombre.</span></li>
+      <li><span>Pensez à ouvrir les fenêtres en matinée et en soirée pour rafraîchir la pièce.</span></li>
+      <li><span>Pensez à vous hydrater.</span></li>
+      <li><span>Evitez les activités physiques.</span></li>
+      <li><span>N’hésitez pas à prendre contact avec des personnes fragiles (personnes âgées, jeunes enfants…).</span></li>
+      <li><span>N’hésitez pas à mouiller votre corps et vous ventiler.</span></li>
+      <li><span>N’oubliez pas de manger en quantité suffisante.</span></li>
+      <li><span>Evitez de boire de l’alcool.</span></li>
+      <li><span>N’hésitez pas à passer du temps dans des endroits frais (cinéma, bibliothèque, supermarché, salle de classe…).</span></li>
+      <li><span>N’hésitez pas à donner et prendre des nouvelles de ses proches.</span></li>
+    </ul>
+    <ul class="thermlow">
+      <p>Lorsque la température est trop basse:</p>
+      <li><span>Essayez de rester chez vous.</span></li>
+      <li><span>Limitez les activités physiques.</span></li>
+      <li><span>Evitez de consommer de l’alcool.</span></li>
+      <li><span>Aérer votre intérieur au moins une fois par jour.</span></li>
+      <li><span>Ne surchauffer pas, cela augmente les risques d’intoxication au monoxyde de carbone.</span></li>
+      <li><span>Ne bouchez pas les aérations.</span></li>
+      <li><span>Si vous êtes obligé de sortir, couvrez-vous convenablement les parties du corps qui perdent le plus de chaleur (les mains, les pieds, la tête, le cou).</span></li>
+    </ul>
+    <ul class="hygrohigh">
+      <p>Lorsque l’humidité est trop élevée:</p>
+      <li><span>Ecartez les meubles des murs afin d’éviter que l’air ne stagne.</span></li>
+      <li><span>Evitez d’installer un trop grand nombre de plantes vertes.</span></li>
+      <li><span>Aérez le matin et le soir ainsi qu’après les activités domestiques.</span></li>
+      <li><span>Nettoyez les dispositifs d’aération.</span></li>
+    </ul>
+    <ul class="hygrolow">
+      <p>Lorsque l’humidité est trop basse:</p>
+      <li><span>Aérez la pièce.</span></li>
+      <li><span>Faites régulièrement la poussière.</span></li>
+      <li><span>Disposez des plantes vertes.</span></li>
+      <li><span>Pensez à investir dans des humidificateurs.</span></li>
+    </ul>
+  </div>
+</body>
+
+</html>

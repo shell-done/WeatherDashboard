@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exportation</title>
+    <link rel="icon" href="../icons/logo.png"/>
+    <link rel="stylesheet" href="export.css"/>
+    <link rel="stylesheet" href="base.css"/>
+    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script type="text/javascript" src="export_script.js"></script>
+  </head>
+  <body onload="loadWebpageData()">
+    <header><h1>Dashboard</h1></header>
+    <div id="header-background"></div>
+    <button id='b1' onclick="displayNav()"><img src="../icons/Menu.png" width="50" height="50" class="menu"></button>
+    <nav>
+      <ul class="menu-home"><a href="home.html"><img src="../icons/home.png" width="50" height="50"></a></ul>
+      <ul class="menu-détails"><a href="détails.html"><img src="../icons/compteur.png" width="50" height="50"></a></ul>
+      <ul class="menu-santé"><a href="santé.html"><img src="../icons/health.png" width="50" height="50"></a></ul>
+      <ul class="menu-export"><a href="export.html"><img src="../icons/table.png" width="50" height="50"></a></ul>
+    </nav>
+    <div class="bloc">
+      <h3>Informations</h3>
+      <div id="choix">
+        <p>Depuis: <input type="datetime-local" name="time_start" value="2018-06-27T10:30" onchange="setValue()"></p>
+        <p><input type="checkbox" name="Température" onchange="setValue()" checked>Température</p>
+        <p>Capteurs: 1<input type="checkbox" onchange="setValue()" name="1" checked> 2<input type="checkbox" onchange="setValue()" name="2" checked> 3<input type="checkbox" onchange="setValue()" name="3" checked> 4<input type="checkbox" onchange="setValue()" name="4" checked> 5<input type="checkbox" onchange="setValue()" name="5" checked> 6<input type="checkbox" onchange="setValue()" name="6" checked> 7<input type="checkbox" onchange="setValue()" name="7" checked></p>
+        <p>Jusqu'à: <input type="datetime-local" name="time_end" value="2018-06-28T10:30" onchange="setValue()"></p>
+        <p><input type="checkbox" name="Humidité" onchange="setValue()" checked>Humidité</p>
+      </div>
+    </div>
+    <div class="bloc" id="erreurs">
+      <img src="../icons/critical.png" width="100" height="100">  <p>Opération impossible pour les paramètres entrés</p>
+    </div>
+    <div class="bloc" id="graphs">
+      <h3>Graphiques</h3>
+      <div id="temperatureChart"></div>
+      <div id="humidityChart"></div>
+    </div>
+    <div class="bloc" id="données">
+    <h3>Données</h3>
+      <p class="infos">De DD/MM/AAAA<br>à DD/MM/AAAA<br><br>Température:<br>Moyenne:<br>Minimum:<br>Maximum:<br><br>Humidité:<br>Moyenne:<br>Minimum:<br>Maximum:</p>
+      <p class="dl">Exporter les données au format CSV: <button type="button" id="#dlCSV" onclick="downloadCSV()">Télécharger</button></p>
+    </div>
+  </body>
+</html>
